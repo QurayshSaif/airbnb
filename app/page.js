@@ -5,6 +5,7 @@ import exploreData from "../data/exploreData.json";
 import cardsData from "../data/cardData.json";
 import MediumCard from "@/components/MediumCard";
 import LargeCard from "@/components/LargeCard";
+import Footer from "@/components/Footer";
 
 Home.getInitialProps = async () => {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
@@ -57,6 +58,7 @@ export default function Home() {
           buttonText="Get Inspired"
         />
       </main>
+      <Footer />
     </>
   );
 }
