@@ -4,6 +4,7 @@ import SmallCard from "@/components/SmallCard";
 import exploreData from "../data/exploreData.json";
 import cardsData from "../data/cardData.json";
 import MediumCard from "@/components/MediumCard";
+import LargeCard from "@/components/LargeCard";
 
 Home.getInitialProps = async () => {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
@@ -49,6 +50,12 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Wishlists curated by Airbnb."
+          buttonText="Get Inspired"
+        />
       </main>
     </>
   );
