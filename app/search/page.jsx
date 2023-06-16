@@ -4,8 +4,8 @@ import { format } from "date-fns";
 import { useSearchParams } from "next/navigation";
 import searchResults from "../../data/searchResults.json";
 import InfoCard from "../../components/InfoCard";
+
 export default function Search() {
-  console.log(searchResults);
   const query = useSearchParams();
   const location = query.get("location");
   const startDate = query.get("startDate");

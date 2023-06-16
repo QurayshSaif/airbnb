@@ -1,37 +1,55 @@
 import Banner from "@/components/Banner";
 import Header from "@/components/Header";
 import SmallCard from "@/components/SmallCard";
+import exploreData from "../data/exploreData.json";
+import cardsData from "../data/cardData.json";
+import MediumCard from "@/components/MediumCard";
 
-export default function Home({ exploreData }) {
-  console.log(exploreData);
+Home.getInitialProps = async () => {
+  const exploreData = await fetch("https://links.papareact.com/pyp").then(
+    (res) => res.json()
+  );
+
+  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
+    res.json()
+  );
+  console.log(exploreData, "exploreData");
+  return {
+    props: {
+      exploreData,
+      cardsData,
+    },
+  };
+};
+
+export default function Home() {
   return (
     <>
       <Header />
       <Banner />
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
-          {/* <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2> */}
-          {exploreData?.map(({ img, location, distance }) => (
-            <SmallCard
-              key={img}
-              img={img}
-              distance={distance}
-              location={location}
-            />
-          ))}
+          <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map(({ img, location, distance }) => (
+              <SmallCard
+                key={img}
+                img={img}
+                distance={distance}
+                location={location}
+              />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard key={img} img={img} title={title} />
+            ))}
+          </div>
         </section>
       </main>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then(
-    (res) => res.json()
-  );
-  return {
-    props: {
-      exploreData,
-    },
-  };
 }
