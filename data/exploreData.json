@@ -1,42 +1,42 @@
 [
   {
     "img": "https://links.papareact.com/5j2",
-    "location": "London",
-    "distance": "45-minute drive"
+    "location": "Toronto",
+    "distance": "30-minute drive"
   },
   {
     "img": "https://links.papareact.com/1to",
-    "location": "Manchester",
-    "distance": "4.5-hour drive"
+    "location": "Mississauga",
+    "distance": "1-hour drive"
   },
   {
     "img": "https://links.papareact.com/40m",
-    "location": "Liverpool",
-    "distance": "4.5-hour drive"
+    "location": "Montreal",
+    "distance": "7-hour drive"
   },
   {
     "img": "https://links.papareact.com/msp",
-    "location": "York",
-    "distance": "4-hour drive"
+    "location": "Oshawa",
+    "distance": "2-hour drive"
   },
   {
     "img": "https://links.papareact.com/2k3",
-    "location": "Cardiff",
-    "distance": "45-minute drive"
+    "location": "Sudbury",
+    "distance": "5-hour drive"
   },
   {
     "img": "https://links.papareact.com/ynx",
-    "location": "Birkenhead",
-    "distance": "4.5-hour drive"
+    "location": "Barrie",
+    "distance": "2-hour drive"
   },
   {
     "img": "https://links.papareact.com/kji",
-    "location": "Newquay",
+    "location": "Ottawa",
     "distance": "6-hour drive"
   },
   {
     "img": "https://links.papareact.com/41m",
-    "location": "Hove",
-    "distance": "2-hour drive"
+    "location": "Hamilton",
+    "distance": "1-hour drive"
   }
 ]

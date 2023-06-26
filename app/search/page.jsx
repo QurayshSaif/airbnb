@@ -4,6 +4,8 @@ import { format } from "date-fns";
 import { useSearchParams } from "next/navigation";
 import searchResults from "../../data/searchResults.json";
 import InfoCard from "../../components/InfoCard";
+import Map from "@/components/Map";
+import Footer from "@/components/Footer";
 
 export default function Search() {
   const query = useSearchParams();
@@ -50,15 +52,11 @@ export default function Search() {
             )}
           </div>
         </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
-
-// export async function getServerSideProps() {
-//   const searchResults = await fetch("https://links.papareact.com/isz").then(
-//     (res) => res.json()
-//   );
-
-//   return { props: { searchResults } };
-// }
