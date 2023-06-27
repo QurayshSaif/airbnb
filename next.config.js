@@ -4,7 +4,7 @@ const nextConfig = {};
 module.exports = {
   nextConfig,
   images: {
-    domains: ["links.papareact.com", "skift.com"],
+    domains: ["skift.com"],
   },
   env: {
     mapbox_key:

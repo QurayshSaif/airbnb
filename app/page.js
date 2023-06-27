@@ -7,23 +7,6 @@ import MediumCard from "@/components/MediumCard";
 import LargeCard from "@/components/LargeCard";
 import Footer from "@/components/Footer";
 
-Home.getInitialProps = async () => {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then(
-    (res) => res.json()
-  );
-
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
-    res.json()
-  );
-  console.log(exploreData, "exploreData");
-  return {
-    props: {
-      exploreData,
-      cardsData,
-    },
-  };
-};
-
 export default function Home() {
   return (
     <>
@@ -52,7 +35,6 @@ export default function Home() {
           </div>
         </section>
         <LargeCard
-          img="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
           description="Wishlists curated by Airbnb."
           buttonText="Get Inspired"
