@@ -22,7 +22,7 @@ export default function Search() {
     <div>
       <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
       <main className="flex">
-        {/* <section className="flex-grow pt-14 px-6">
+        <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
             300+ stays from {range} for {noOfGuests} guests'
           </p>
@@ -51,7 +51,7 @@ export default function Search() {
               )
             )}
           </div>
-        </section> */}
+        </section>
         {/* <section className="hidden xl:inline-flex xl:min-w-[600px]">
           <Map searchResults={searchResults} />
         </section> */}
